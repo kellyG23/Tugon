@@ -1,0 +1,95 @@
+body {
+  background: var(--background-color) url(/images/background-stats.png)
+    no-repeat;
+  background-size: 80rem;
+  background-position: center 49rem;
+}
+
+img {
+  width: 376px;
+  height: 376px;
+  padding-left: 27px;
+}
+
+p,
+p > a,
+h1 {
+  color: var(--blue-primary);
+}
+
+p,
+p > a {
+  font-size: 24px;
+}
+
+h1,
+.div-text > p {
+  font-size: 32;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 70px;
+}
+
+.div-text > p {
+  margin: 0 50px;
+  text-align: justify;
+  text-indent: 50px;
+  font-family: "GlacialIndifference", arial;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-flex > p {
+  margin: 16px 0 150px;
+  border: 10px solid var(--background-color);
+}
+
+.div-flex {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  background-color: var(--blue-primary);
+  border: 12px solid var(--blue-primary);
+  padding: 0 6px 0 6px;
+}
+
+.play-nav {
+  font-size: 48px;
+  border-radius: 24px;
+}
+
+.custom-nav {
+  font-size: 16px;
+  width: 176px;
+  border-radius: 50px;
+}
+
+.custom-nav:hover,
+.play-nav:hover {
+  background-color: var(--blue-secondary);
+  border-color: var(--blue-secondary);
+}
+
+.div-flex > p:hover {
+  background: var(--blue-tertiary);
+  border-color: var(--blue-tertiary);
+  border-radius: 15px;
+  color: var(--blue-secondary);
+}

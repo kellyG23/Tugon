@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url(/fonts/GlacialIndifference-Regular.otf);
+}
+:root {
+  --blue-primary: #003274;
+  --blue-secondary: #004aad;
+  --blue-tertiary: #dce7f5;
+
+  --background-color: #f3f8ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 50px 50px;
+}
+
+* {
+  font-family: "Lexend Giga", sans-serif;
+}
