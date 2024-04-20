@@ -10,15 +10,21 @@
   --background-color: #f3f8ff;
 }
 
+* {
+  font-family: "Lexend Giga", sans-serif;
+  color: var(--blue-primary);
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--background-color);
 }
 
 body {
   background-color: var(--background-color);
-  margin: 50px 50px;
 }
 
-* {
-  font-family: "Lexend Giga", sans-serif;
+a {
+  text-decoration: none;
+  color: white;
 }
