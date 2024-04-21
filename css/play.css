@@ -2,7 +2,7 @@
 body {
   background: var(--background-color) url(/images/background-globe.png)
     no-repeat;
-  background-position: center 400px;
+  background-position: center 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,12 +29,21 @@ h3 {
   gap: 50px 200px;
 }
 
-.container > span {
+.container > a {
   background: var(--blue-primary);
   color: var(--background-color);
   text-align: center;
   border: 15px solid var(--blue-primary);
   border-radius: 15px;
+}
+
+.container > a:focus,
+.container > a:hover,
+a:focus,
+a:hover {
+  transition: 0.5s;
+  background: var(--blue-secondary);
+  border-color: var(--blue-secondary);
 }
 
 /* Navigate */
@@ -48,8 +57,4 @@ a {
 
 .nav {
   margin: 50px 0;
-}
-
-.a-one {
-  margin-right: 700px;
 }

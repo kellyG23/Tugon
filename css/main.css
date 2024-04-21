@@ -83,6 +83,7 @@ span {
 .play-nav:hover {
   background-color: var(--blue-secondary);
   border-color: var(--blue-secondary);
+  transition: 0.5s;
 }
 
 .div-flex > p:hover {
@@ -90,4 +91,5 @@ span {
   border-color: var(--blue-tertiary);
   border-radius: 15px;
   color: var(--blue-secondary);
+  transition: 0.5s;
 }
