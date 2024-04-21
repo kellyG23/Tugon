@@ -1,5 +1,3 @@
-const wordLengths = targetWords.map((word) => word.length);
-const WORD_LENGTH = wordLengths;
 const FLIP_ANIMATION_DURATION = 500;
 const DANCE_ANIMATION_DURATION = 500;
 const keyboard = document.querySelector("[data-keyboard]");
@@ -8,8 +6,25 @@ const guessGrid = document.querySelector("[data-guess-grid]");
 const offsetFromDate = new Date(2022, 0, 1);
 const msOffset = Date.now() - offsetFromDate;
 const dayOffset = msOffset / 1000 / 60 / 60 / 24;
-const targetWord = targetWords[Math.floor(dayOffset)];
+const targetWord = targetWords[Math.floor(Math.random() * targetWords.length)];
+const WORD_LENGTH = targetWord.length;
 
+const tile = document.querySelector(".guess-grid");
+
+while (guessGrid.firstChild) {
+  guessGrid.removeChild(guessGrid.firstChild);
+}
+
+for (let i = 0; i < targetWord.length * 6; i++) {
+  const div = document.createElement("div");
+  div.classList.add("tile");
+  guessGrid.appendChild(div);
+}
+const numColumns = WORD_LENGTH;
+guessGrid.style.gridTemplateColumns = `repeat(${numColumns}, minmax(auto, 4em))`;
+
+console.log(WORD_LENGTH);
+console.log(targetWord);
 startInteraction();
 
 function startInteraction() {
@@ -85,12 +100,6 @@ function submitGuess() {
   const guess = activeTiles.reduce((word, tile) => {
     return word + tile.dataset.letter;
   }, "");
-
-  if (!dictionary.includes(guess)) {
-    showAlert("Not in word list");
-    shakeTiles(activeTiles);
-    return;
-  }
 
   stopInteraction();
   activeTiles.forEach((...params) => flipTile(...params, guess));
