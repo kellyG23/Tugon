@@ -46,6 +46,10 @@ a:hover {
   border-color: var(--blue-secondary);
 }
 
+p {
+  text-align: center;
+}
+
 /* Navigate */
 a {
   display: inline;

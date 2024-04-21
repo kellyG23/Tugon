@@ -104,17 +104,17 @@ body {
 
 .tile[data-state="wrong"] {
   border: none;
-  background-color: hsl(240, 2%, 23%);
+  background-color: #d30103;
 }
 
 .tile[data-state="wrong-location"] {
   border: none;
-  background-color: hsl(49, 51%, 47%);
+  background-color: #e9cd0f;
 }
 
 .tile[data-state="correct"] {
   border: none;
-  background-color: hsl(115, 29%, 43%);
+  background-color: #008000;
 }
 
 .tile.shake {
